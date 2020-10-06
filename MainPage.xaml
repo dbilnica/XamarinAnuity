@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Anuita.MainPage">
+
+    <StackLayout>
+        <Entry Text="{Binding RocniUrokProcenta}" Placeholder="Roční úroková míra (%)" Keyboard="Numeric" />
+        <Entry Text="{Binding PocatecniHodnotaDluhu}" Placeholder="Počáteční hodnota dluhu (Kč)" Keyboard="Numeric" />
+        <Entry Text="{Binding PocetLetSplatek}" Placeholder="Počet let splácení" Keyboard="Numeric" />
+        
+        <Button Text="1. Měsíční úrokova míra" Command="{Binding CommandUrokovka}"/>
+        <Button Text="2. Splátka" Command="{Binding CommandAnuita}"/>
+
+
+        <Label Text="Měsíční úrokova míra číní:" FontSize="Large" />
+        <Label Text="{Binding Urokovka}" FontSize="Large" TextColor="Black"/>
+        <Label Text="Měsíční splátka (anuita) čini:" FontSize="Large"/>
+        <Label Text="{Binding Anuita}" FontSize="Large" TextColor="Black"/>
+
+    </StackLayout>
+
+</ContentPage>
+
